@@ -15,15 +15,22 @@ const validateUser = () => {
 };
 
 const loginForm = () => {
-  const str = `<div>
+  const str = `
+    <div style='display:flex'>
+    <div>
     <h3>Login Form</h3>
     <p id='errorTxt'></p>
     <p><input type='text' id='txtEmail1'></p>
     <p><input type='password' id='txtPass1'></p>
     <p><button onclick='validateUser()'>Submit</button></p>
     <p><button onclick='registerForm()'>Create Account</button></p>
+    </div>
+    <div>
+    <h3>List of Users</h3>
+    </div>
+    </div>
     `;
-  root.innerHTML = str + "</div>";
+  root.innerHTML = str;
 };
 
 const saveUser = () => {
